@@ -43,6 +43,16 @@ class Post {
                 reject('Post could not be created');
             }
         })
+    };
+
+    destroy(){
+        return new Promise (async (resolve, reject) => {
+            try {
+                const result = await db.query(`DELETE FROM posts WHERE id = $1 RETURNING id;`, [ this.id ]);
+            } catch (err) {
+                reject('Post could not be delete')
+            }
+        })
     }
 };
 

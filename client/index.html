@@ -9,20 +9,30 @@
     <title>The Times</title>
 </head>
 <body>
-    <div class="main">
-        <section class="input-section">
-            <form id="post-form">
-                <input id="post-title" placeholder="Give it a title">
-                <input id="post-name" placeholder="Tell us your name">
-                <textarea id="post-textbox" placeholder="Tell us your story"></textarea>
-            </form>
+    <nav>
+        <span id="logo">
+            <a href='#'>
+                <img src="https://th.bing.com/th/id/R.8662bc4e3cf7980bda20a673b43c3ca2?rik=G7Alqf3WH7FcSA&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f04%2fSymbol-New-York-Times.png&ehk=wnAAtm9ZoxukF%2bN0fW74iCoei69oASHnAt5v3Zk%2fbGE%3d&risl=&pid=ImgRaw&r=0" alt="The Times Logo" width=4% />
+            </a>
+        </span>
+        <div id="linkset">
+            <a class="navlink" href="#posts">Posts</a>
+            <a class="navlink" href="#posts/new">Add a story</a>
+        </div>
+    </nav>
+    
+    <main>
+        <h1 class="title">Welcome to The Times</h1>
+    </main>
 
-        </section>
-        <ul id="posts">
+    <section id="modal" style="display: none;">
+        <i><a href="#">x</a></i>
+        <h2></h2>
+        <article></article>
+    </section>
 
-        </ul>
-    </div>
-
+    <script src="script.js"></script>
+    <script src="requests.js"></script>
 
 </body>
 </html>
