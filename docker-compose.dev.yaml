@@ -32,7 +32,7 @@ services:
       - "dbdata:/var/lib/postgresql/data"
     environment: 
       - POSTGRES_DB=library
-      - POSTGRES_USER=telgraphuser
+      - POSTGRES_USER=telegraphuser
       - POSTGRES_PASSWORD=librarypass
 volumes:
   dbdata:

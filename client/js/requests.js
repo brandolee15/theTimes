@@ -38,3 +38,13 @@ async function postStory(e){
         console.warn(err);
     }
 }
+
+async function deletePost(id){
+    try {
+        const options = { method: 'DELETE' }
+        await fetch(`http://localhost:3000/posts/${id}`, options);
+        window.location.hash = `#posts`
+    } catch (err) {
+        console.warn(err);
+    }
+}

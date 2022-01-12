@@ -4,4 +4,4 @@
 - Open docker desktop
 
 ## Wins and challenges
-- Setup
+- 
