@@ -4,35 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="client/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>The Times</title>
+    <title>Telegraph.zs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="static/img/favicon.png">
 </head>
 <body>
-    <nav>
-        <span id="logo">
-            <a href='#'>
-                <img src="https://th.bing.com/th/id/R.8662bc4e3cf7980bda20a673b43c3ca2?rik=G7Alqf3WH7FcSA&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f04%2fSymbol-New-York-Times.png&ehk=wnAAtm9ZoxukF%2bN0fW74iCoei69oASHnAt5v3Zk%2fbGE%3d&risl=&pid=ImgRaw&r=0" alt="The Times Logo" width=4% />
-            </a>
-        </span>
-        <div id="linkset">
-            <a class="navlink" href="#posts">Posts</a>
-            <a class="navlink" href="#posts/new">Add a story</a>
-        </div>
-    </nav>
-    
-    <main>
-        <h1 class="title">Welcome to The Times</h1>
-    </main>
-
-    <section id="modal" style="display: none;">
-        <i><a href="#">x</a></i>
-        <h2></h2>
-        <article></article>
+    <section id="bodyContent">
+        <form id='publishForm'>
+            <input id='postTitle' class='title' type="text" name='postTitle' placeholder="Title" autocomplete="off">
+            <input id='postName' class='name' type="text" name='postName' placeholder="Your name" autocomplete="off">
+            <textarea id="postStory" class="story" placeholder="Your Story..."></textarea>
+            <input type="submit" class="submit-btn" value="publish">
+        </form>
     </section>
-
-    <script src="script.js"></script>
-    <script src="requests.js"></script>
-
+    <footer>
+        <p>Telegraph Clone by Sharen & Brandon, 2021</p>
+    </footer>
+    <script src="static/post.js"></script>
 </body>
 </html>
