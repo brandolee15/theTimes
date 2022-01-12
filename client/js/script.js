@@ -1,10 +1,10 @@
-const { post } = require("../api/controllers/posts");
+const { post } = require("../../api/controllers/posts");
 
 const postsContainer = document.getElementById('posts')
 
 function endpoint(path) {
     path = path || '';
-    return 'http://localhost:8080/' + path;
+    return 'http://localhost:3000/' + path;
 };
 
 function post(url, json) {
