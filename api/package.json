@@ -20,6 +20,8 @@
   "devDependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.2",
-    "nodemon": "^2.0.15"
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
   }
 }
