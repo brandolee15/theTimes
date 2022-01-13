@@ -1,7 +1,7 @@
-const db = require('../db/init');
+const db = require('../dbConfig/init');
 
 class Post {
-    constructor(data, post){
+    constructor(data){
         this.id = data.id;
         this.title = data.title;
         this.name = data.name;
@@ -23,7 +23,7 @@ class Post {
     static findById(id){
         return new Promise (async (resolve, reject) => {
             try {
-                let postData = await db.query(`SELECT * FROM posts ON id = $1`, [ id ]);
+                let postData = await db.query(`SELECT * FROM posts WHERE id = $1`, [ id ]);
                 let post = new Post(postData.rows[0]);
                 resolve(post);
             } catch (err) {
@@ -36,7 +36,7 @@ class Post {
         return new Promise (async (resolve, reject) => {
             try{
               const { title, name, post } = postData;
-              const newPost = await db.query(`INSER INTO posts (title, name, post) VALUES ($1, $2, $3) RETURNING *;`, [ titel, name, post])
+              const newPost = await db.query(`INSERT INTO posts (title, name, post) VALUES ($1, $2, $3) RETURNING *;`, [ titel, name, post])
               let story = new Post(newPost.rows[0]);
               resolve (story);   
             } catch (err) {

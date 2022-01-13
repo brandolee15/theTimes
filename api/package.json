@@ -1,10 +1,12 @@
 {
   "name": "thetimes",
   "version": "1.0.0",
-  "description": "- Open docker desktop",
+  "description": "Lap 2 coding challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seedDev": "node dbConfig/seedDev.js"
   },
   "repository": {
     "type": "git",
