@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/post');
+const Post = require('../models/Post.js');
 
 //Post index route
 router.get('/', async (req, res) => {
@@ -22,6 +22,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+//Post create route
 router.post('/', async (req, res) => {
     try {
         const post = await Post.create(req.body);

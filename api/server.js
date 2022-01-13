@@ -8,6 +8,6 @@ server.use(express.json());
 const postsRoutes = require('./controllers/posts');
 server.use('/posts', postsRoutes);
 
-server.get('/', (req, res) => res.send('Welcome to the times'))
+server.get('/', (req, res) => res.send('Welcome to the telegraph'))
 
 module.exports = server

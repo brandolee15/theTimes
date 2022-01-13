@@ -1,7 +1,7 @@
 const db = require('../db/init');
 
 class Post {
-    constructor(data, post){
+    constructor(data){
         this.id = data.id;
         this.title = data.title;
         this.name = data.name;
@@ -36,7 +36,7 @@ class Post {
         return new Promise (async (resolve, reject) => {
             try{
               const { title, name, post } = postData;
-              const newPost = await db.query(`INSER INTO posts (title, name, post) VALUES ($1, $2, $3) RETURNING *;`, [ titel, name, post])
+              const newPost = await db.query(`INSERT INTO posts (title, name, post) VALUES ($1, $2, $3) RETURNING *;`, [ titel, name, post])
               let story = new Post(newPost.rows[0]);
               resolve (story);   
             } catch (err) {

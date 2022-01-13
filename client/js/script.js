@@ -7,7 +7,7 @@ function endpoint(path) {
     return 'http://localhost:3000/' + path;
 };
 
-function post(url, json) {
+function newPost(url, json) {
     return fetch(url, {
         method: 'POST',
         body: JSON.stringify(json),
@@ -32,16 +32,16 @@ function renderRoot(data) {
 }
 
 function createPost(text) {
-    post(endpoint(), {text: text})
+    newPost(endpoint(), {text: text})
         .then(response => response.json())
         .then(appendPost);
 }
 
-var enter = document.getElementById('entry-form');
+var enter = document.getElementById('publishForm');
 if(enter){
     enter.addEventListener('submit', function(event) {
         event.preventDefault();
-        const textarea = document.getElementById('post-textbox');
+        const textarea = document.getElementById('postStory');
         const text = textarea.value;
         textarea.value = '';
         createPost(text);
