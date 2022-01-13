@@ -5,7 +5,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-const postsRoutes = require('./controllers/posts');
+const postsRoutes = require('./routes/posts');
 server.use('/posts', postsRoutes);
 
 server.get('/', (req, res) => res.send('Welcome to the telegraph'))
